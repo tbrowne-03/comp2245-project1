@@ -282,3 +282,31 @@ section {
 .site-footer p {
    margin: 0;
 }
+
+/* Small media screens */
+@media (max-width: 768px) {
+   h1 {
+      font-size: 40px;
+   }
+
+   h2 {
+      font-size: 30px;
+   }
+
+   section {
+      padding: 48px 0;
+   }
+
+   .site-header .container,
+   .site-footer .container {
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-start;
+   }
+
+   .hero .container,
+   .feature-list,
+   .visit .container {
+      grid-template-columns: 1fr;
+   }
+}
