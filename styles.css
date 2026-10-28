@@ -4,12 +4,14 @@
 /* Whole page
 */
 
+/* This gives every element border-box sizing */
 *,
 *::before,
 *::after {
    box-sizing: border-box;
 }
 
+/*Sets all default body styles*/
 body {
    margin: 0;
    font-family: "Inter", Arial, sans-serif;
@@ -18,6 +20,7 @@ body {
    color: #1A202C;
 }
 
+/* Headings and logo font*/
 h1,
 h2,
 h3,
@@ -43,6 +46,7 @@ h3 {
    font-weight: bold;
 }
 
+/* Stops image overflowing */
 img {
    max-width: 100%;
    height: auto;
@@ -58,7 +62,7 @@ section {
    padding: 80px 0;
 }
 
-/* Buttons */
+/* Buttons fonts and styling*/
 .btn {
    display: inline-block;
    background-color: #2F855A;
@@ -75,7 +79,7 @@ section {
    background-color: #276749;
 }
 
-/* Header */
+/* Header font and styling */
 .site-header {
    border-bottom: 1px solid #E2E8F0;
    padding: 16px 0;
@@ -108,4 +112,39 @@ section {
 .nav-links a:hover {
    color: #2F855A;
    text-decoration: underline;
+}
+
+/* Hero */
+.hero {
+   background-color: #F0FFF4;
+}
+
+.hero .container {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 48px;
+   align-items: center;
+}
+
+.hero p {
+   font-size: 20px;
+   margin-bottom: 24px;
+}
+
+/* Features */
+.features h2 {
+   text-align: center;
+   margin-bottom: 48px;
+}
+
+.feature-list {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 32px;
+}
+
+.feature {
+   padding: 32px;
+   border-radius: 12px;
+   background-color: #F7FAFC;
 }
