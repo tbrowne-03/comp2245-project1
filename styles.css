@@ -203,3 +203,65 @@ section {
    color: #4A5568;
    margin: 0;
 }
+
+/* Signup form */
+.signup h2,
+.signup .container>p {
+   text-align: center;
+}
+
+#signup-form {
+   max-width: 520px;
+   margin: 0 auto;
+   text-align: left;
+}
+
+.field {
+   margin-bottom: 8px;
+}
+
+#signup-form label {
+   display: block;
+   margin-bottom: 6px;
+   margin-top: 16px;
+   font-weight: bold;
+}
+
+#signup-form input,
+#signup-form select {
+   display: block;
+   width: 100%;
+   padding: 10px 12px;
+   border: 1px solid #A0AEC0;
+   border-radius: 8px;
+   font: inherit;
+}
+
+#signup-form .btn {
+   width: 100%;
+   margin-top: 24px;
+}
+
+.error {
+   color: #C53030;
+   font-size: 15px;
+   min-height: 20px;
+   margin: 4px 0 0;
+}
+
+[aria-invalid="true"] {
+   border: 2px solid #C53030;
+}
+
+#form-message {
+   max-width: 520px;
+   margin: 16px auto 0;
+}
+
+#form-message.success {
+   background-color: #C6F6D5;
+   color: #22543D;
+   font-weight: bold;
+   padding: 16px;
+   border-radius: 8px;
+}
