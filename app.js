@@ -1,6 +1,6 @@
 // Project 1: write your form validation in this file.
 
-// stores parts of the form into variables to avoid unnecessary searching
+// stores parts of the document into variables to avoid unnecessary searching
 const form = document.querySelector('#signup-form');
 const nameField = document.querySelector('#name');
 const emailField = document.querySelector('#email');
@@ -32,34 +32,34 @@ form.addEventListener('submit', function (event) {
     }
 
     // email check, checks if it's empty, checks to see if it follows the pattern
-    if (emailValue ==='') {
+    if (emailValue === '') {
         showError(emailField, 'email-error', 'Enter your email address.');
         if (!firstInvalid) firstInvalid = emailField;
-  } else if (!emailPattern.test(emailValue)) {
-    showError(emailField, 'email-error', 'Enter an email address in the format: name@example.com.');
-    if (!firstInvalid) firstInvalid = emailField;
+    } else if (!emailPattern.test(emailValue)) {
+        showError(emailField, 'email-error', 'Enter an email address in the format: name@example.com.');
+        if (!firstInvalid) firstInvalid = emailField;
     } else {
         clearError(emailField, 'email-error');
     }
 
     // checks the select dropdown 
     if (frequencyValue === '') {
-    showError(frequencyField, 'frequency-error', 'How often should we email you?');
-    if (!firstInvalid) firstInvalid = frequencyField;
-  } else {
-    clearError(frequencyField, 'frequency-error');
-  }
+        showError(frequencyField, 'frequency-error', 'How often should we email you?');
+        if (!firstInvalid) firstInvalid = frequencyField;
+    } else {
+        clearError(frequencyField, 'frequency-error');
+    }
 
 // if firstInvalid is null then everything else passed 
   if (firstInvalid) {
-    formMessage.textContent = '';
-    formMessage.classList.remove('success');
-    firstInvalid.focus();
-  } else {
-    formMessage.textContent = `Thank you, ${nameValue}! You're on the mailing list.`;
-    formMessage.classList.add('success');
-    form.reset();
-  }
+        formMessage.textContent = '';
+        formMessage.classList.remove('success');
+        firstInvalid.focus();
+    } else {
+        formMessage.textContent = `Thank you, ${nameValue}! You're on the mailing list.`;
+        formMessage.classList.add('success');
+        form.reset();
+    }
 
 });
 
