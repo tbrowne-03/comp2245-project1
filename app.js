@@ -8,7 +8,7 @@ const frequencyField = document.querySelector('#frequency');
 const formMessage = document.querySelector('#form-message');
 
 
-// catches email mistakes, had to look the email pattern part up to figure it out
+// catches email mistakes
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 form.addEventListener('submit', function (event) {
